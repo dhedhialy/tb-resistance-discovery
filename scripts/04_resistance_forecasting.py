@@ -140,8 +140,8 @@ CORE_BINDING_RESIDUES = {
     "katG": set(range(104, 116)) | set(range(270, 331)),  # active site + heme pocket
     "embB": set(range(295, 531)),   # EMB-binding TMD region
     "gyrA": set(range(74, 151)),    # QRDR
-    "gyrB": set(range(495, 556)),   # FQ-binding region
-    "pncA": set(range(1, 187)),     # entire PZase domain
+    "gyrB": set(range(461, 500)),   # QRDR-B (FQ-binding region)
+    "pncA": {4, 7, 8, 9, 10, 11, 12, 13, 20, 49, 51, 71, 85, 96, 125, 133, 138},  # catalytic/Fe-site pocket
     "rpsL": set(range(23, 99)),     # streptomycin-binding domain
     "inhA": set(range(1, 270)),     # entire INH-NADH binding domain
 }

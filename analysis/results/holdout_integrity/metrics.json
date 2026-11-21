@@ -1,0 +1,250 @@
+{
+  "train_n": 130,
+  "train_pnca": 82,
+  "test_n": 20,
+  "test_by_gene": {
+    "gyrA": 1,
+    "gyrB": 1,
+    "katG": 1,
+    "pncA": 16,
+    "rpoB": 1
+  },
+  "pool_n": 6220,
+  "pool_model_auprc": 0.1859013311212833,
+  "pool_model_auroc": 0.9462338709677419,
+  "pool_dist_auprc": 0.015487986897082126,
+  "pool_dist_auroc": 0.8542540322580645,
+  "pool_model_auprc_ci95": [
+    0.11893645443812834,
+    0.3596961758049644
+  ],
+  "shuffle_exceedances": 0,
+  "shuffle_n": 200,
+  "pnca_pool_top20": 3,
+  "pnca_n": 16,
+  "global_top50_test_hits": 0,
+  "blocks": [
+    {
+      "label": "global_all_residues",
+      "n_pos": 20,
+      "n_neg": 6330,
+      "auroc": 0.9268009478672986,
+      "auprc": 0.04326115819678728,
+      "auprc_bootstrap_mean": 0.046321084538728005,
+      "auprc_ci95_lo": 0.03339992272117319,
+      "auprc_ci95_hi": 0.060212415368981746,
+      "random_auprc": 0.0031496062992125984
+    },
+    {
+      "label": "pool_exclude_train_positives",
+      "n_pos": 20,
+      "n_neg": 6200,
+      "auroc": 0.9462338709677419,
+      "auprc": 0.1859013311212833,
+      "auprc_bootstrap_mean": 0.21085482043303586,
+      "auprc_ci95_lo": 0.11893645443812834,
+      "auprc_ci95_hi": 0.3596961758049644,
+      "random_auprc": 0.003215434083601286
+    },
+    {
+      "label": "pool_primary_no_katG",
+      "n_pos": 19,
+      "n_neg": 6201,
+      "auroc": 0.9601422520985579,
+      "auprc": 0.19516969163993395,
+      "auprc_bootstrap_mean": 0.22212139988535248,
+      "auprc_ci95_lo": 0.1210677788228637,
+      "auprc_ci95_hi": 0.38100682154752685,
+      "random_auprc": 0.003054662379421222
+    },
+    {
+      "label": "pool_drug_proximity_baseline",
+      "n_pos": 20,
+      "n_neg": 6200,
+      "auroc": 0.8542540322580645,
+      "auprc": 0.015487986897082126,
+      "auprc_bootstrap_mean": 0.01594105333071195,
+      "auprc_ci95_lo": 0.010163515008320299,
+      "auprc_ci95_hi": 0.023530902225082546,
+      "random_auprc": 0.003215434083601286
+    },
+    {
+      "label": "global_drug_proximity_baseline",
+      "n_pos": 20,
+      "n_neg": 6330,
+      "auroc": 0.8465126382306477,
+      "auprc": 0.014005749156766388,
+      "auprc_bootstrap_mean": 0.01464291216630251,
+      "auprc_ci95_lo": 0.00948118396697615,
+      "auprc_ci95_hi": 0.02090918657817993,
+      "random_auprc": 0.0031496062992125984
+    },
+    {
+      "label": "pool_model_top20",
+      "n_pos_recovered": 4,
+      "recall": 0.2
+    },
+    {
+      "label": "pool_distance_top20",
+      "n_pos_recovered": 0,
+      "recall": 0.0
+    },
+    {
+      "label": "pool_primary_model_top20",
+      "n_pos_recovered": 4,
+      "recall": 0.21052631578947367
+    },
+    {
+      "label": "pool_model_top50",
+      "n_pos_recovered": 11,
+      "recall": 0.55
+    },
+    {
+      "label": "pool_distance_top50",
+      "n_pos_recovered": 0,
+      "recall": 0.0
+    },
+    {
+      "label": "pool_primary_model_top50",
+      "n_pos_recovered": 11,
+      "recall": 0.5789473684210527
+    },
+    {
+      "label": "pool_model_top100",
+      "n_pos_recovered": 15,
+      "recall": 0.75
+    },
+    {
+      "label": "pool_distance_top100",
+      "n_pos_recovered": 0,
+      "recall": 0.0
+    },
+    {
+      "label": "pool_primary_model_top100",
+      "n_pos_recovered": 15,
+      "recall": 0.7894736842105263
+    }
+  ],
+  "gyrb_447": {
+    "gene": "gyrB",
+    "residue": "S447",
+    "domain": "transducer",
+    "domain_note": "S447 sits in the transducer/TOPRIM junction immediately N-terminal to QRDR-B (461\u2013499), not in the N-terminal ATPase domain. It is adjacent to the fluoroquinolone-linked region but outside the conservative pocket used for inner_distance.",
+    "inner_distance_after_qrdr_fix": 14,
+    "drug_proximity": 0.3253090435914119,
+    "pool_rank": 3853,
+    "global_rank": 3983,
+    "within_gene_rank": 381,
+    "explanation": "gyrB S447 is a clear miss under the leakage-free model: after fixing QRDR-B to 461\u2013499 its inner_distance remains large relative to true pocket residues, so the conservative pocket features give almost no positive signal. We report the miss and do not retune the model to recover it (that would be test-set fitting).",
+    "paper_treatment": "anecdote_not_statistics"
+  },
+  "within_gene": [
+    {
+      "gene": "gyrA",
+      "n_residues": 838,
+      "n_test_positives": 1,
+      "auroc": 0.994026284348865,
+      "auprc": 0.16666666666666666,
+      "random_auprc": 0.0011933174224343676,
+      "median_test_rank": 6.0,
+      "mean_test_rank": 6.0,
+      "top10_hits": 1,
+      "top20_hits": 1,
+      "test_ranks": "6"
+    },
+    {
+      "gene": "gyrB",
+      "n_residues": 675,
+      "n_test_positives": 1,
+      "auroc": 0.43620178041543023,
+      "auprc": 0.0026246719160104987,
+      "random_auprc": 0.0014814814814814814,
+      "median_test_rank": 381.0,
+      "mean_test_rank": 381.0,
+      "top10_hits": 0,
+      "top20_hits": 0,
+      "test_ranks": "381"
+    },
+    {
+      "gene": "katG",
+      "n_residues": 740,
+      "n_test_positives": 1,
+      "auroc": 0.6170500676589987,
+      "auprc": 0.0035211267605633804,
+      "random_auprc": 0.0013513513513513514,
+      "median_test_rank": 284.0,
+      "mean_test_rank": 284.0,
+      "top10_hits": 0,
+      "top20_hits": 0,
+      "test_ranks": "284"
+    },
+    {
+      "gene": "pncA",
+      "n_residues": 186,
+      "n_test_positives": 16,
+      "auroc": 0.39227941176470593,
+      "auprc": 0.07163126564288613,
+      "random_auprc": 0.08602150537634409,
+      "median_test_rank": 109.5,
+      "mean_test_rank": 111.8125,
+      "top10_hits": 0,
+      "top20_hits": 0,
+      "test_ranks": "84,92,94,98,99,104,107,109,110,120,121,122,123,128,132,146"
+    },
+    {
+      "gene": "rpoB",
+      "n_residues": 1166,
+      "n_test_positives": 1,
+      "auroc": 0.9776824034334763,
+      "auprc": 0.037037037037037035,
+      "random_auprc": 0.0008576329331046312,
+      "median_test_rank": 27.0,
+      "mean_test_rank": 27.0,
+      "top10_hits": 0,
+      "top20_hits": 0,
+      "test_ranks": "27"
+    }
+  ],
+  "leave_pnca_out": [
+    {
+      "gene": "gyrA",
+      "residue_pos": 89,
+      "pool_rank_full": 49,
+      "pool_rank_leave_pnca_out": 8,
+      "within_gene_rank_full": 6,
+      "within_gene_rank_leave_pnca_out": 6,
+      "score_full": 0.05591360852122307,
+      "score_leave_pnca_out": 0.1603545993566513
+    },
+    {
+      "gene": "gyrB",
+      "residue_pos": 447,
+      "pool_rank_full": 3853,
+      "pool_rank_leave_pnca_out": 4120,
+      "within_gene_rank_full": 381,
+      "within_gene_rank_leave_pnca_out": 408,
+      "score_full": 9.07888897927478e-05,
+      "score_leave_pnca_out": 4.6387613110709935e-05
+    },
+    {
+      "gene": "katG",
+      "residue_pos": 1,
+      "pool_rank_full": 1991,
+      "pool_rank_leave_pnca_out": 904,
+      "within_gene_rank_full": 284,
+      "within_gene_rank_leave_pnca_out": 138,
+      "score_full": 0.00026589390472508967,
+      "score_leave_pnca_out": 0.00035226845648139715
+    },
+    {
+      "gene": "rpoB",
+      "residue_pos": 438,
+      "pool_rank_full": 10,
+      "pool_rank_leave_pnca_out": 5,
+      "within_gene_rank_full": 27,
+      "within_gene_rank_leave_pnca_out": 28,
+      "score_full": 0.24218767881393433,
+      "score_leave_pnca_out": 0.20418870449066162
+    }
+  ]
+}

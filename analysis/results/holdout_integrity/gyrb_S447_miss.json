@@ -1,0 +1,13 @@
+{
+  "gene": "gyrB",
+  "residue": "S447",
+  "domain": "transducer",
+  "domain_note": "S447 sits in the transducer/TOPRIM junction immediately N-terminal to QRDR-B (461\u2013499), not in the N-terminal ATPase domain. It is adjacent to the fluoroquinolone-linked region but outside the conservative pocket used for inner_distance.",
+  "inner_distance_after_qrdr_fix": 14,
+  "drug_proximity": 0.3253090435914119,
+  "pool_rank": 3853,
+  "global_rank": 3983,
+  "within_gene_rank": 381,
+  "explanation": "gyrB S447 is a clear miss under the leakage-free model: after fixing QRDR-B to 461\u2013499 its inner_distance remains large relative to true pocket residues, so the conservative pocket features give almost no positive signal. We report the miss and do not retune the model to recover it (that would be test-set fitting).",
+  "paper_treatment": "anecdote_not_statistics"
+}

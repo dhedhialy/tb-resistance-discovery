@@ -289,8 +289,20 @@ The staged architecture (population → structure → mechanism → calibrated t
 ### 4.2 Why precision–recall must lead the narrative
 At 0.5% prevalence, F1@0.5 = 0.38 despite excellent ranking (32/32 in top 32). Reviewers will ask about "low F1" — answer with **AUPRC 0.465**, **P = 0.80 @ R ≥ 0.25**, and top-K recall. Figure 2C is the primary classifier figure.
 
-### 4.3 Limitations (this work)
-- TB only: 32 positive residues; homoplasy not recomputed per CV fold.
+### 4.3 WHO 2021→2023 temporal holdout (integrity suite)
+Full write-up: `analysis/results/holdout_integrity/HOLDOUT_INTEGRITY_REPORT.md`.
+
+- **Train:** 130 WHO-2021 Group 1/2 residues (82 pncA). **Test:** 20 residues newly Assoc-w-R in WHO 2023.
+- **Leakage-free controls:** gyrB QRDR-B 461–499; pncA catalytic pocket (not whole domain); within-gene feature z-scoring.
+- **Holds (pool):** AUPRC 0.186 vs drug-distance 0.015; top-100 recovers 15/20 vs 0/20; label-shuffle 0/200.
+- **Fails (within-gene pncA):** AUROC 0.39 — 2023 pncA additions are rarer / less buried than 2021 training sites (LoF distribution shift). Do **not** claim within-gene pncA discovery.
+- **Anecdotes:** gyrA 89 and rpoB 438 rank near the top within gene; stable under leave-pncA-out.
+- **gyrB S447:** clear miss (transducer/TOPRIM junction, weak pocket signal) — explain, do not retune.
+- **CRyPTIC pocket supplementary:** 70 FDR-enriched non-catalogue pocket-gene residues; modest lift vs distance (see `cryptic_pocket_metrics.json`).
+
+### 4.4 Limitations (this work)
+- TB only; original CV used 32 positives; homoplasy not recomputed per CV fold.
+- Within-gene temporal generalization fails for new pncA (LoF) sites — report as a limitation, not a headline.
 - Vina: rigid receptor; misses allosteric resistance.
 - **MRSA and Alzheimer's not yet attempted** — see §5 for planned extensions.
 

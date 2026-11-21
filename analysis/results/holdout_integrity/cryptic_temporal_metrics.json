@@ -1,0 +1,68 @@
+{
+  "n_isolates": 12287,
+  "cutoff_index": 6143,
+  "train_n": 43,
+  "test_n": 5,
+  "test_by_gene": {
+    "embB": 2,
+    "gyrB": 1,
+    "inhA": 1,
+    "rpoB": 1
+  },
+  "test_non_pnca": 5,
+  "pool_auprc": 0.003550799865229763,
+  "pool_auroc": 0.723135512535703,
+  "pool_top100": 0,
+  "within_gene": [
+    {
+      "gene": "embB",
+      "n_test": 2,
+      "auroc": 0.7892335766423357,
+      "auprc": 0.007656781720952844,
+      "random": 0.0018214936247723133
+    }
+  ],
+  "top20_test": [
+    {
+      "gene": "gyrB",
+      "residue_pos": 302,
+      "first_seen": 9214,
+      "pool_rank": 154,
+      "within_gene_rank": 17,
+      "score": 0.0013163182884454727
+    },
+    {
+      "gene": "embB",
+      "residue_pos": 521,
+      "first_seen": 6826,
+      "pool_rank": 383,
+      "within_gene_rank": 102,
+      "score": 0.0005139030981808901
+    },
+    {
+      "gene": "inhA",
+      "residue_pos": 162,
+      "first_seen": 9176,
+      "pool_rank": 1154,
+      "within_gene_rank": 59,
+      "score": 0.00018620995979290456
+    },
+    {
+      "gene": "embB",
+      "residue_pos": 1017,
+      "first_seen": 7518,
+      "pool_rank": 1585,
+      "within_gene_rank": 363,
+      "score": 0.000136639951961115
+    },
+    {
+      "gene": "rpoB",
+      "residue_pos": 1106,
+      "first_seen": 9447,
+      "pool_rank": 5463,
+      "within_gene_rank": 999,
+      "score": 3.2053867471404374e-05
+    }
+  ],
+  "note": "Phenotype order proxy; FDR q<0.05 resistance enrichment required for test positives."
+}
