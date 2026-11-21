@@ -2,7 +2,7 @@
 
 **Working title:** *Emergence Forecasting Model for protein hotspots: residue-level mutation forecasting validated in M. tuberculosis drug resistance*
 
-**Authors:** Aly Dhedhi, Vinay Singamsetty, Li-Lun Ho, Manolis Kellis (Kellis Lab, MIT)
+**Author:** Aly Dhedhi
 
 **Authoritative metrics:** `analysis/results/PUBLICATION_METRICS.md` · regenerate: `python scripts/13_final_publication_audit.py`
 

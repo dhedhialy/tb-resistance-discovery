@@ -18,8 +18,8 @@ AutoDock Vina v1.2.7
 #################################################################
 
 Scoring function : vina
-Rigid receptor: C:\Users\Guest Kellis Lab\tb-resistance-discovery\data\pdb\rpoB_P483R.pdbqt
-Ligand: C:\Users\Guest Kellis Lab\tb-resistance-discovery\data\pdb\RFP_ligand.pdbqt
+Rigid receptor: C:\Users\user\tb-resistance-discovery\data\pdb\rpoB_P483R.pdbqt
+Ligand: C:\Users\user\tb-resistance-discovery\data\pdb\RFP_ligand.pdbqt
 Grid center: X 163.119 Y 162.91 Z 18.03
 Grid size  : X 22 Y 22 Z 22
 Grid space : 0.375

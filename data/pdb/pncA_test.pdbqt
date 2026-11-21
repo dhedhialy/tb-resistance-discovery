@@ -1,4 +1,4 @@
-REMARK  Name = C:\Users\Guest Kellis Lab\tb-resistance-discovery\data\pdb\alphafold\pncA_I6XD65_alphafold.pdb
+REMARK  Name = C:\Users\user\tb-resistance-discovery\data\pdb\alphafold\pncA_I6XD65_alphafold.pdb
 REMARK  623 active torsions:
 REMARK  status: ('A' for Active; 'I' for Inactive)
 REMARK    1  A    between atoms: CA_2  and  C_3

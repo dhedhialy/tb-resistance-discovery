@@ -489,7 +489,7 @@ if len(q10r) > 0:
 else:
     warn("pncA Q10R not found")
 
-# SECTION 8: Statistical Rigor (Manolis requests)
+# SECTION 8: Statistical Rigor
 print("\n" + "=" * 70)
 print("SECTION 8: Statistical Rigor Checks")
 print("=" * 70)

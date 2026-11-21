@@ -1,7 +1,7 @@
 # Executive Summary — TB Resistance Emergence Forecasting Pipeline
 
 **Project:** Forecasting Emerging Tuberculosis Drug Resistance  
-**Authors:** Aly Dhedhi, Vinay Singamsetty, Li-Lun Ho, Manolis Kellis (Kellis Lab, MIT)  
+**Author:** Aly Dhedhi  
 **Repository:** `tb-resistance-discovery`  
 **Last updated:** June 2026  
 

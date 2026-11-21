@@ -16,7 +16,7 @@ BASE = Path(__file__).resolve().parent.parent
 PDB = BASE / "data" / "pdb"
 OUT = BASE / "analysis" / "results"
 FORECAST = OUT / "forecasting"
-VINA = Path(r"C:\Users\Guest Kellis Lab\AppData\Local\Programs\Python\Python312\vina.exe")
+VINA = Path(__import__("shutil").which("vina") or "vina")
 
 sys.path.insert(0, str(BASE / "scripts"))
 from sidechain_builder import mutate_residue_heavy, prepare_pdbqt  # noqa: E402

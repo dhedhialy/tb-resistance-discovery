@@ -1,7 +1,6 @@
 # Forecasting Emerging Tuberculosis Drug Resistance
 
-Aly Dhedhi, Vinay Singamsetty, Li-Lun Ho, Manolis Kellis
-Kellis Lab, MIT CSAIL
+Aly Dhedhi
 
 ---
 

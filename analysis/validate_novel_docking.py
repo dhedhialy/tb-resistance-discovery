@@ -20,7 +20,7 @@ import pandas as pd
 BASE = Path(__file__).resolve().parent.parent
 PDB = BASE / "data" / "pdb"
 OUT = BASE / "analysis" / "results"
-VINA = Path(r"C:\Users\Guest Kellis Lab\AppData\Local\Programs\Python\Python312\vina.exe")
+VINA = Path(__import__("shutil").which("vina") or "vina")
 
 NOVEL_FIVE = [
     ("gyrB", "Q538L", "MFX"),
